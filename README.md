@@ -1,4 +1,4 @@
-![Logo](frontend/src/assets/favicon.png)
+<img src="frontend/src/assets/favicon.png" width="100" alt="Chloris Garden">
 # Chloris Garden - Plant Disease Classification App
 
 Aplikasi fullstack untuk klasifikasi kesehatan tanaman pangan menggunakan kecerdasan buatan. Pengguna dapat mengunggah foto daun tanaman dan mendapatkan hasil deteksi penyakit beserta informasi penanganannya secara real-time.

@@ -1,16 +1,110 @@
-# React + Vite
+# 🌿 Frontend — Tanaman Pangan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikasi web untuk klasifikasi kesehatan tanaman pangan. Dibangun dengan **React 19**, **Vite**, dan **Tailwind CSS 4**, aplikasi ini memungkinkan pengguna mengunggah foto daun tanaman dan mendapatkan hasil deteksi penyakit secara real-time.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📁 Struktur Folder
 
-## React Compiler
+```
+frontend/
+├── src/                  # Source code utama
+├── index.html            # Entry point HTML
+├── vite.config.js        # Konfigurasi Vite
+├── eslint.config.js      # Konfigurasi ESLint
+├── vercel.json           # Konfigurasi deployment Vercel
+└── package.json          # Dependensi dan skrip
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Fitur
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📸 **Unggah & klasifikasi gambar** — deteksi penyakit tanaman dari foto daun
+- 📊 **Dashboard** — ringkasan statistik scan dan aktivitas pengguna
+- 📜 **Riwayat klasifikasi** — daftar hasil scan dengan filter, pencarian, dan paginasi
+- 📚 **Ensiklopedia penyakit** — informasi lengkap penyakit, gejala, dan penanganan
+- 🔐 **Autentikasi** — register, login, lupa password, dan reset password
+- 👤 **Manajemen profil** — ubah nama, password, dan foto profil
+
+---
+
+## ⚙️ Instalasi & Menjalankan Lokal
+
+### Prasyarat
+
+- Node.js >= 18
+- Backend dan ML Service sudah berjalan (lihat README masing-masing)
+
+### Langkah Setup
+
+1. **Masuk ke folder frontend**
+   ```bash
+   cd frontend
+   ```
+
+2. **Install dependensi**
+   ```bash
+   npm install
+   ```
+
+3. **Buat file environment**
+   ```bash
+   cp .env.example .env
+   ```
+   Isi variabel berikut di file `.env`:
+   ```env
+   VITE_API_BASE_URL=http://localhost:3000
+   ```
+
+4. **Jalankan development server**
+   ```bash
+   npm run dev
+   ```
+   Aplikasi akan berjalan di `http://localhost:5173`
+
+---
+
+## 📜 Skrip yang Tersedia
+
+| Skrip           | Keterangan                                  |
+|-----------------|---------------------------------------------|
+| `npm run dev`   | Menjalankan development server dengan HMR   |
+| `npm run build` | Build untuk production ke folder `dist/`    |
+| `npm run preview` | Preview hasil build secara lokal          |
+| `npm run lint`  | Menjalankan ESLint untuk memeriksa kode     |
+
+---
+
+## 📦 Dependensi Utama
+
+| Package              | Keterangan                                  |
+|----------------------|---------------------------------------------|
+| react 19             | Library UI utama                            |
+| react-router-dom 7   | Routing halaman                             |
+| axios                | HTTP client untuk komunikasi dengan API     |
+| tailwindcss 4        | Utility-first CSS framework                 |
+| chart.js + react-chartjs-2 | Visualisasi data dan grafik          |
+| lucide-react         | Library ikon                                |
+| driver.js            | Fitur guided tour / onboarding pengguna     |
+| vite                 | Build tool dan development server           |
+
+---
+
+## 🚀 Deployment
+
+Aplikasi ini dikonfigurasi untuk di-deploy ke **Vercel**. File `vercel.json` sudah tersedia untuk menangani client-side routing dengan React Router.
+
+```bash
+npm run build
+```
+
+Output build berada di folder `dist/` dan siap di-deploy ke Vercel atau platform hosting statis lainnya.
+
+---
+
+## 🔗 Keterkaitan dengan Layanan Lain
+
+Frontend berkomunikasi **hanya dengan Backend** melalui REST API. Pastikan URL Backend sudah dikonfigurasi dengan benar di variabel environment `VITE_API_BASE_URL`.
+
+Untuk dokumentasi lengkap endpoint API, lihat [`backend/README.md`](../backend/README.md).

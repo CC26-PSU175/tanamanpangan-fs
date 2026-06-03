@@ -1,4 +1,5 @@
-# 🌿 Tanaman Pangan — Plant Disease Classification App
+![Logo](frontend/src/assets/favicon.png)
+# Chloris Garden - Plant Disease Classification App
 
 Aplikasi fullstack untuk klasifikasi kesehatan tanaman pangan menggunakan kecerdasan buatan. Pengguna dapat mengunggah foto daun tanaman dan mendapatkan hasil deteksi penyakit beserta informasi penanganannya secara real-time.
 
@@ -18,17 +19,17 @@ tanamanpangan-fs/
 ## 🧩 Arsitektur Sistem
 
 ```
-┌─────────────┐       REST API        ┌─────────────────┐
-│   Frontend  │ ──────────────────▶  │    Backend       │
-│  (React)    │ ◀──────────────────  │  (Express.js)    │
-└─────────────┘                       └────────┬────────┘
-                                               │ HTTP (POST /predict)
-                                               ▼
-                                      ┌─────────────────┐
-                                      │   ML Service     │
-                                      │  (FastAPI +      │
-                                      │  TensorFlow)     │
-                                      └─────────────────┘
+                ┌─────────────┐       REST API        ┌─────────────────┐
+                │   Frontend  │ ──────────────────▶  │    Backend       │
+                │  (React)    │ ◀──────────────────  │  (Express.js)    │
+                └─────────────┘                       └────────┬────────┘
+                                                            │ HTTP (POST /predict)
+                                                            ▼
+                                                    ┌─────────────────┐
+                                                    │   ML Service    │
+                                                    │  (FastAPI +     │
+                                                    │  TensorFlow)    │
+                                                    └─────────────────┘
 ```
 
 - **Frontend** mengirimkan gambar ke Backend melalui REST API.
@@ -62,18 +63,18 @@ tanamanpangan-fs/
 
 ---
 
-## 🌱 Fitur Utama
+## ✨ Fitur Utama
 
-- 🔍 **Klasifikasi penyakit tanaman** berbasis gambar menggunakan model deep learning (EfficientNet + SE Block)
-- 📊 **Dashboard statistik** ringkasan aktivitas scan pengguna
-- 📜 **Riwayat klasifikasi** dengan filter, pencarian, dan paginasi
-- 🔐 **Autentikasi pengguna** dengan JWT (register, login, forgot/reset password)
-- 👤 **Manajemen profil** termasuk foto profil via AWS S3
-- 📚 **Ensiklopedia penyakit** — daftar penyakit beserta gejala, penyebab, dan cara penanganan
+- **Klasifikasi penyakit tanaman** berbasis gambar menggunakan model deep learning (EfficientNet + SE Block)
+- **Dashboard statistik** ringkasan aktivitas scan pengguna
+- **Riwayat klasifikasi** dengan filter, pencarian, dan paginasi
+- **Autentikasi pengguna** dengan JWT (register, login, forgot/reset password)
+- **Manajemen profil** termasuk foto profil via AWS S3
+- **Ensiklopedia penyakit** — daftar penyakit beserta gejala, penyebab, dan cara penanganan
 
 ---
 
-## 🦠 Penyakit yang Didukung (Tanaman Tomat)
+## 🦠 Penyakit yang Didukung (Saat ini)
 
 | Label Model      | Nama Penyakit   |
 |------------------|-----------------|

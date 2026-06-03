@@ -1,4 +1,4 @@
-# 🤖 ML Service — Plant Disease Classification Microservice
+# ML Service — Plant Disease Classification Microservice
 
 Microservice inferensi model AI untuk mendeteksi penyakit tanaman. Dibangun dengan **FastAPI** dan **TensorFlow**, layanan ini menerima URL gambar dari backend, menjalankan prediksi, dan mengembalikan label penyakit beserta confidence score.
 
@@ -72,8 +72,8 @@ Menjalankan klasifikasi penyakit dari URL gambar.
 
 **Response Error:**
 
-| Kode | Penyebab                                      |
-|------|-----------------------------------------------|
+| Kode | Penyebab                                       |
+|------|------------------------------------------------|
 | 400  | Gagal mengambil gambar dari URL yang diberikan |
 | 500  | Model belum berhasil dimuat / error inferensi  |
 
@@ -132,6 +132,6 @@ Menjalankan klasifikasi penyakit dari URL gambar.
 
 ## 📝 Catatan
 
-- File `model.keras` harus tersedia di direktori yang sama dengan `main.py`. Pastikan file tersebut tidak di-*gitignore* atau tersedia melalui mekanisme lain (misalnya download otomatis saat startup).
+- File `model.keras` harus tersedia di direktori yang sama dengan `main.py`.
 - Layanan ini dirancang untuk dipanggil secara internal oleh **Backend**, bukan oleh Frontend secara langsung.
 - Gambar diambil langsung dari URL S3 yang diberikan oleh Backend, sehingga URL tersebut harus dapat diakses secara publik atau memiliki presigned URL yang valid.

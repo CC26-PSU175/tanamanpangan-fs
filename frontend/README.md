@@ -1,6 +1,6 @@
-# 🌿 Frontend — Tanaman Pangan
+# Frontend — Chloris Garden
 
-Aplikasi web untuk klasifikasi kesehatan tanaman pangan. Dibangun dengan **React 19**, **Vite**, dan **Tailwind CSS 4**, aplikasi ini memungkinkan pengguna mengunggah foto daun tanaman dan mendapatkan hasil deteksi penyakit secara real-time.
+Aplikasi web untuk klasifikasi kesehatan tanaman pangan. Dibangun dengan **React**, **Vite**, dan **Tailwind**, aplikasi ini memungkinkan pengguna mengunggah foto daun tanaman dan mendapatkan hasil deteksi penyakit secara real-time.
 
 ---
 
@@ -20,12 +20,12 @@ frontend/
 
 ## ✨ Fitur
 
-- 📸 **Unggah & klasifikasi gambar** — deteksi penyakit tanaman dari foto daun
-- 📊 **Dashboard** — ringkasan statistik scan dan aktivitas pengguna
-- 📜 **Riwayat klasifikasi** — daftar hasil scan dengan filter, pencarian, dan paginasi
-- 📚 **Ensiklopedia penyakit** — informasi lengkap penyakit, gejala, dan penanganan
-- 🔐 **Autentikasi** — register, login, lupa password, dan reset password
-- 👤 **Manajemen profil** — ubah nama, password, dan foto profil
+- **Unggah & klasifikasi gambar** — deteksi penyakit tanaman dari foto daun
+- **Dashboard** — ringkasan statistik scan dan aktivitas pengguna
+- **Riwayat klasifikasi** — daftar hasil scan dengan filter, pencarian, dan paginasi
+- **Ensiklopedia penyakit** — informasi lengkap penyakit, gejala, dan penanganan
+- **Autentikasi** — register, login, lupa password, dan reset password
+- **Manajemen profil** — ubah nama, password, dan foto profil
 
 ---
 
@@ -52,10 +52,7 @@ frontend/
    ```bash
    cp .env.example .env
    ```
-   Isi variabel berikut di file `.env`:
-   ```env
-   VITE_API_BASE_URL=http://localhost:3000
-   ```
+   Isi variabel VITE_API_BASE_URL di file `.env`:   # Jika kosong, secara default akan menggunakan `http:localhost:3000`
 
 4. **Jalankan development server**
    ```bash
@@ -63,18 +60,6 @@ frontend/
    ```
    Aplikasi akan berjalan di `http://localhost:5173`
 
----
-
-## 📜 Skrip yang Tersedia
-
-| Skrip           | Keterangan                                  |
-|-----------------|---------------------------------------------|
-| `npm run dev`   | Menjalankan development server dengan HMR   |
-| `npm run build` | Build untuk production ke folder `dist/`    |
-| `npm run preview` | Preview hasil build secara lokal          |
-| `npm run lint`  | Menjalankan ESLint untuk memeriksa kode     |
-
----
 
 ## 📦 Dependensi Utama
 
@@ -88,20 +73,6 @@ frontend/
 | lucide-react         | Library ikon                                |
 | driver.js            | Fitur guided tour / onboarding pengguna     |
 | vite                 | Build tool dan development server           |
-
----
-
-## 🚀 Deployment
-
-Aplikasi ini dikonfigurasi untuk di-deploy ke **Vercel**. File `vercel.json` sudah tersedia untuk menangani client-side routing dengan React Router.
-
-```bash
-npm run build
-```
-
-Output build berada di folder `dist/` dan siap di-deploy ke Vercel atau platform hosting statis lainnya.
-
----
 
 ## 🔗 Keterkaitan dengan Layanan Lain
 
